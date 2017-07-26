@@ -1,8 +1,12 @@
 # VIM Configuration
 
+![](https://user-images.githubusercontent.com/19753339/28611556-6d82891c-71ec-11e7-91d0-5372b98b7e0f.png)
+
 # Install
 
-First, create a backup of your current vim setup:
+First, install [nord color theme](https://github.com/arcticicestudio/nord-terminal-app) on your Terminal.
+
+Then, create a backup of your current vim setup:
 
 ```bash
 $ mv ~/.vim ~/.vim.old
@@ -17,7 +21,4 @@ $ mv vim-config ~/.vim
 $ ln -s ~/.vim/vimrc ~/.vimrc
 ```
 
-# Install plugins
-
-Open vim and type ``:PlugInstall`` to install all the plugins
-
+Finally, open vim and type ``:PlugInstall`` to install all the plugins.

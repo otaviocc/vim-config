@@ -3,11 +3,12 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/syntastic'
 Plug 'keith/swift.vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'itchyny/lightline.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 set nocompatible
@@ -50,12 +51,14 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" lightline
-set laststatus=2
-let g:lightline = {'colorscheme': 'nord'}
-
 " swift.vim
 let g:syntastic_swift_checkers = ['swiftpm', 'swiftlint']
+
+" airline
+"let g:airline#extensions#tabline#enabled = 1
+set laststatus=2
+let g:airline_powerline_fonts = 1
+let g:bufferline_echo = 0
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>

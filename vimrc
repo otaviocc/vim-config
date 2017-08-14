@@ -1,4 +1,5 @@
-" vim-plug
+" Plugged ----------------------------------------------------------------
+
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/syntastic'
 Plug 'keith/swift.vim'
@@ -11,11 +12,12 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
+" Environment ------------------------------------------------------------
+
 set nocompatible
 filetype plugin indent on
 syntax enable
 
-" Environment
 set background=dark
 set term=$TERM
 set noerrorbells
@@ -35,13 +37,19 @@ set tabstop=4
 set softtabstop=4
 set pastetoggle=<F12>
 set backspace=indent,eol,start
+set colorcolumn=120
 
-" Git commit messages...
+set background=dark
+colorscheme nord
+
+" git commit messages ----------------------------------------------------
+
 au FileType gitcommit setlocal tw=75
 
-" PLUGINS
+" PLUGINS ----------------------------------------------------------------
 
 " syntastic
+
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -52,18 +60,22 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " swift.vim
+
 let g:syntastic_swift_checkers = ['swiftpm', 'swiftlint']
 
 " airline
-"let g:airline#extensions#tabline#enabled = 1
+
 set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:bufferline_echo = 0
 
 " NERDTree
-map <C-n> :NERDTreeToggle<CR>
 
-" UI
-set background=dark
-colorscheme nord
+map <leader>n :NERDTreeToggle<CR>
+map <leader>j :NERDTreeFind<CR>
+let NERDTreeIgnore=['\.DS_Store', '\~$', '\.swp']
+
+" git gutter
+
+let g:gitgutter_sign_column_always=1
 

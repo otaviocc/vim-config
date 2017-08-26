@@ -4,7 +4,7 @@
 
 # Install
 
-First, install [nord color theme](https://github.com/arcticicestudio/nord-terminal-app) on your Terminal.
+First, apply the [nord color theme](https://github.com/arcticicestudio/nord-terminal-app) to your Terminal.
 
 Then, create a backup of your current vim setup:
 

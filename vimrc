@@ -2,6 +2,7 @@
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/syntastic'
 Plug 'keith/swift.vim'
+Plug 'keith/tmux.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'arcticicestudio/nord-vim'
 Plug 'airblade/vim-gitgutter'

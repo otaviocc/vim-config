@@ -1,10 +1,8 @@
 # VIM Configuration
 
-![](https://user-images.githubusercontent.com/19753339/28611556-6d82891c-71ec-11e7-91d0-5372b98b7e0f.png)
-
 # Install
 
-First, apply the [nord color theme](https://github.com/arcticicestudio/nord-terminal-app) to your Terminal.
+First, apply the [Pencil Light theme](https://github.com/lysyi3m/osx-terminal-themes) to your Terminal.
 
 Then, create a backup of your current vim setup:
 

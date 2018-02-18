@@ -69,7 +69,14 @@ let g:syntastic_swift_checkers = ['swiftpm', 'swiftlint']
 " NERDTree {{{
 map <leader>n :NERDTreeToggle<CR>
 map <leader>j :NERDTreeFind<CR>
-let NERDTreeIgnore=['\.DS_Store', '\~$', '\.swp']
+let NERDTreeIgnore = ['\.DS_Store', '\~$', '\.swp']
+" }}}
+
+" ctrlp {{{
+let g:ctrlp_custom_ignore = {
+      \ 'dir':  '\.git$\|tmp$\|.build$',
+      \ 'file': '\.o$\|\.so$\|\.dat$|\.DS_Store$'
+      \ }
 " }}}
 
 " git gutter {{{

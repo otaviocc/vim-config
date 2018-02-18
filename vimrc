@@ -23,7 +23,7 @@ syntax enable
 
 set term=$TERM
 set noerrorbells
-set cursorline
+" set cursorline
 set hlsearch
 set incsearch
 set number
@@ -73,7 +73,8 @@ let NERDTreeIgnore=['\.DS_Store', '\~$', '\.swp']
 " }}}
 
 " git gutter {{{
-let g:gitgutter_sign_column_always=1
+" let g:gitgutter_sign_column_always=1 "vim < 8
+set signcolumn=yes " vim >= 8"
 " }}}
 
 " airline {{{
@@ -92,9 +93,9 @@ let g:bufferline_echo = 0
 " }}}
 
 " nord color scheme {{{
-" colorscheme nord
-" set background=dark
-" let g:airline_theme='nord'
+colorscheme nord
+set background=dark
+let g:airline_theme='nord'
 " }}}
 
 " OSX Terminal's default color scheme {{{
@@ -110,9 +111,9 @@ let g:bufferline_echo = 0
 " }}}
 
 " dracula {{{
-let g:airline_theme='dracula'
-set background=dark
-colorscheme dracula
+" let g:airline_theme='dracula'
+" set background=dark
+" colorscheme dracula
 " }}}
 
 " solarized light {{{

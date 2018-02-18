@@ -1,11 +1,12 @@
 " Plugged {{{
 call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/syntastic'
 Plug 'keith/swift.vim'
 Plug 'keith/tmux.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -70,6 +71,12 @@ let g:syntastic_swift_checkers = ['swiftpm', 'swiftlint']
 map <leader>n :NERDTreeToggle<CR>
 map <leader>j :NERDTreeFind<CR>
 let NERDTreeIgnore = ['\.DS_Store', '\~$', '\.swp']
+" }}}
+
+" NERDCommenter {{{
+let g:NERDSpaceDelims = 1
+let g:NERDTrimTrailingWhitespace = 1
+let g:NERDCompactSexyComs = 1
 " }}}
 
 " ctrlp {{{

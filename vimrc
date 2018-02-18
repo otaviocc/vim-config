@@ -14,6 +14,7 @@ Plug 'rakr/vim-one'
 Plug 'arcticicestudio/nord-vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'dracula/vim'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 " }}}
 

@@ -10,11 +10,12 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'rakr/vim-one'
+Plug 'sheerun/vim-polyglot'
 Plug 'arcticicestudio/nord-vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'dracula/vim'
-Plug 'sheerun/vim-polyglot'
+Plug 'joshdick/onedark.vim'
+Plug 'reedes/vim-colors-pencil'
 call plug#end()
 " }}}
 
@@ -25,7 +26,6 @@ syntax enable
 
 set term=$TERM
 set noerrorbells
-" set cursorline
 set hlsearch
 set incsearch
 set number
@@ -41,8 +41,14 @@ set tabstop=4
 set softtabstop=4
 set pastetoggle=<F12>
 set backspace=indent,eol,start
-" set colorcolumn=120
 set foldmethod=marker
+" }}}
+
+" Environment (GUI) {{{
+if has("gui_running")
+    set guioptions-=rL
+    set guifont=Menlo\ Regular:h13
+endif
 " }}}
 
 " git commit messages {{{
@@ -88,13 +94,16 @@ let g:ctrlp_custom_ignore = {
 " }}}
 
 " git gutter {{{
-" let g:gitgutter_sign_column_always=1 "vim < 8
-set signcolumn=yes " vim >= 8"
+if v:version >= 800
+    set signcolumn=yes
+else
+    let g:gitgutter_sign_column_always=1
+endif
 " }}}
 
 " airline {{{
 set laststatus=2
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0 "1
 let g:bufferline_echo = 0
 " }}}
 
@@ -119,10 +128,11 @@ let g:airline_theme='nord'
 " }}}
 
 " one color scheme {{{
-" set background=light
-" let g:one_allow_italics = 1
-" let g:airline_theme='one'
-" colorscheme one
+" let g:onedark_termcolors = 16
+" let g:onedark_terminal_italics = 0
+" let g:airline_theme='onedark'
+" set background=dark
+" colorscheme onedark
 " }}}
 
 " dracula {{{
@@ -132,9 +142,12 @@ let g:airline_theme='nord'
 " }}}
 
 " solarized light {{{
-" let g:airline_theme='solarized'
-" let g:solarized_termcolors=256
-" let g:solarized_termtrans=1
+" let g:airline_theme='solarized"
+" let g:solarized_termcolors = 256
+" let g:solarized_termtrans = 1
+" let g:solarized_italic = 0
+" let g:solarized_bold = 0
+" let g:solarized_underline = 0
 " set background=light
 " colorscheme solarized
 " }}}

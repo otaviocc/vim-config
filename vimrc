@@ -16,6 +16,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'dracula/vim'
 Plug 'joshdick/onedark.vim'
 Plug 'reedes/vim-colors-pencil'
+Plug 'ayu-theme/ayu-vim'
 call plug#end()
 " }}}
 
@@ -52,7 +53,8 @@ endif
 " }}}
 
 " git commit messages {{{
-au FileType gitcommit setlocal tw=75
+au FileType gitcommit setlocal tw=72
+au FileType gitcommit setlocal cc=72
 " }}}
 
 " CocoaPods {{{
@@ -64,31 +66,31 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_auto_loc_list=1
+let g:syntastic_check_on_open=1
+let g:syntastic_check_on_wq=0
 " }}}
 
 " swift.vim {{{
-let g:syntastic_swift_checkers = ['swiftpm', 'swiftlint']
+let g:syntastic_swift_checkers=['swiftpm', 'swiftlint']
 " }}}
 
 " NERDTree {{{
 map <leader>n :NERDTreeToggle<CR>
 map <leader>j :NERDTreeFind<CR>
-let NERDTreeIgnore = ['\.DS_Store', '\~$', '\.swp']
+let NERDTreeIgnore=['\.DS_Store', '\~$', '\.swp']
 " }}}
 
 " NERDCommenter {{{
-let g:NERDSpaceDelims = 1
-let g:NERDTrimTrailingWhitespace = 1
-let g:NERDCompactSexyComs = 1
+let g:NERDSpaceDelims=1
+let g:NERDTrimTrailingWhitespace=1
+let g:NERDCompactSexyComs=1
 " }}}
 
 " ctrlp {{{
-let g:ctrlp_custom_ignore = {
-      \ 'dir':  '\.git$\|tmp$\|.build$',
+let g:ctrlp_custom_ignore={
+      \ 'dir': '\.git$\|tmp$\|.build$',
       \ 'file': '\.o$\|\.so$\|\.dat$|\.DS_Store$'
       \ }
 " }}}
@@ -103,17 +105,17 @@ endif
 
 " airline {{{
 set laststatus=2
-let g:airline_powerline_fonts = 0 "1
-let g:bufferline_echo = 0
+let g:airline_powerline_fonts=0 "1
+let g:bufferline_echo=0
 " }}}
 
 " pencil color scheme {{{
 " colorscheme pencil
 " set background=light
 " let g:airline_theme='pencil'
-" let g:pencil_neutral_code_bg = 1
-" let g:pencil_higher_contrast_ui = 1
-" let g:pencil_gutter_color = 0
+" let g:pencil_neutral_code_bg=1
+" let g:pencil_higher_contrast_ui=1
+" let g:pencil_gutter_color=0
 " }}}
 
 " nord color scheme {{{
@@ -128,27 +130,36 @@ let g:airline_theme='nord'
 " }}}
 
 " one color scheme {{{
-" let g:onedark_termcolors = 16
-" let g:onedark_terminal_italics = 0
+" let g:onedark_termcolors=16
+" let g:onedark_terminal_italics=0
 " let g:airline_theme='onedark'
 " set background=dark
 " colorscheme onedark
 " }}}
 
-" dracula {{{
+" dracula color scheme {{{
 " let g:airline_theme='dracula'
 " set background=dark
 " colorscheme dracula
 " }}}
 
-" solarized light {{{
-" let g:airline_theme='solarized"
-" let g:solarized_termcolors = 256
-" let g:solarized_termtrans = 1
-" let g:solarized_italic = 0
-" let g:solarized_bold = 0
-" let g:solarized_underline = 0
+" solarized light color scheme {{{
+" let g:airline_theme="solarized"
+" let g:solarized_termcolors=256
+" let g:solarized_termtrans=1
+" let g:solarized_italic=0
+" let g:solarized_bold=0
+" let g:solarized_underline=0
 " set background=light
 " colorscheme solarized
 " }}}
 
+" ayu color scheme {{{
+" set termguicolors
+" let ayucolor="light"
+" let g:airline_theme="ayu"
+" let ayucolor="dark"
+" let ayucolor="mirage"
+" let g:airline_theme="ayu_mirage"
+" colorscheme ayu
+" }}}

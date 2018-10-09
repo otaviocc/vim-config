@@ -39,7 +39,7 @@ set pastetoggle=<F12>
 set backspace=indent,eol,start
 set foldmethod=marker
 set complete+=kspell
-set nowrap
+set wrap
 " }}}
 
 " Environment (GUI) {{{
@@ -58,7 +58,7 @@ au FileType gitcommit setlocal spell
 
 " CocoaPods {{{
 au BufNewFile,BufRead Podfile,*.podspec set filetype=ruby
-au BufNewFile,BufRead Podfile,*.podspec setlocal makeprg=bundle\ exec\ pod\ install\ --repo-update
+au BufNewFile,BufRead Podfile,*.podspec command PodInstall execute ":term ++close bundle exec pod install --repo-update"
 " }}}
 
 " Markdown {{{
@@ -129,22 +129,22 @@ let g:bufferline_echo=0
 " }}}
 
 " arcticicestudio/nord-vim {{{
-" colorscheme nord
-" set background=dark
-" let g:airline_theme='nord'
+colorscheme nord
+set background=dark
+let g:airline_theme='nord'
 " }}}
 
 " macOS Basic {{{
 " colorscheme default
 " set background=light
-" let g:airline_theme='light'
+" let g:airline_theme='soda'
 " }}}
 
 " reedes/vim-colors-pencil {{{
-colorscheme pencil
-set background=light
-let g:airline_theme='pencil'
-let g:pencil_neutral_code_bg=1
-let g:pencil_higher_contrast_ui=1
-let g:pencil_gutter_color=0
+" colorscheme pencil
+" set background=light
+" let g:airline_theme='pencil'
+" let g:pencil_neutral_code_bg=1
+" let g:pencil_higher_contrast_ui=1
+" let g:pencil_gutter_color=0
 " }}}

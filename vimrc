@@ -4,14 +4,7 @@ Plug 'keith/swift.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'gabesoft/vim-ags'
-Plug 'sheerun/vim-polyglot'
-Plug 'arcticicestudio/nord-vim'
-Plug 'reedes/vim-colors-pencil'
 call plug#end()
 " }}}
 
@@ -95,12 +88,6 @@ map <leader>j :NERDTreeFind<CR>
 let NERDTreeIgnore=['\.DS_Store', '\~$', '\.swp']
 " }}}
 
-" scrooloose/nerdcommenter {{{
-let g:NERDSpaceDelims=1
-let g:NERDTrimTrailingWhitespace=1
-let g:NERDCompactSexyComs=1
-" }}}
-
 " ctrlpvim/ctrlp.vim {{{
 let g:ctrlp_custom_ignore={
       \ 'dir': 'node_modules\|_site$\|\.git$\|tmp$\|.build$',
@@ -122,29 +109,7 @@ else
 endif
 " }}}
 
-" vim-airline/vim-airline {{{
-set laststatus=2
-let g:airline_powerline_fonts=0 "1
-let g:bufferline_echo=0
-" }}}
-
-" arcticicestudio/nord-vim {{{
-colorscheme nord
+" ornithocoder/mojave-dark-vim {{{
+colorscheme mojave-dark
 set background=dark
-let g:airline_theme='nord'
-" }}}
-
-" macOS Basic {{{
-" colorscheme default
-" set background=light
-" let g:airline_theme='soda'
-" }}}
-
-" reedes/vim-colors-pencil {{{
-" colorscheme pencil
-" set background=light
-" let g:airline_theme='pencil'
-" let g:pencil_neutral_code_bg=1
-" let g:pencil_higher_contrast_ui=1
-" let g:pencil_gutter_color=0
 " }}}

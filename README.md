@@ -2,7 +2,7 @@
 
 # Install
 
-First, apply the [Pencil Light theme](https://github.com/lysyi3m/osx-terminal-themes) to your Terminal.
+First, install and apply the [Mojave Dark](https://github.com/ornithocoder/mojave-dark-terminal) profile to your Terminal.
 
 Then, create a backup of your current vim setup:
 

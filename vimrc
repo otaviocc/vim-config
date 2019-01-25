@@ -5,11 +5,16 @@ Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'ornithocoder/mojave-dark-vim'
+Plug 'arcticicestudio/nord-vim'
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
 call plug#end()
 " }}}
 
 " Environment {{{
 set nocompatible
+set encoding=utf-8
 filetype plugin indent on
 syntax enable
 
@@ -85,6 +90,7 @@ let g:syntastic_swift_checkers=['swiftlint']
 map <leader>n :NERDTreeToggle<CR>
 map <leader>j :NERDTreeFind<CR>
 
+let g:NERDTreeDirArrows=0
 let NERDTreeIgnore=['\.DS_Store', '\~$', '\.swp']
 " }}}
 
@@ -96,11 +102,11 @@ let g:ctrlp_custom_ignore={
 " }}}
 
 " airblade/vim-gitgutter {{{
-let g:gitgutter_sign_added = '✚'
-let g:gitgutter_sign_modified = '●'
-let g:gitgutter_sign_removed = '━'
-let g:gitgutter_sign_removed_first_line = '━'
-let g:gitgutter_sign_modified_removed = '┅'
+let g:gitgutter_sign_added = '+'
+let g:gitgutter_sign_modified = '*'
+let g:gitgutter_sign_removed = '-'
+let g:gitgutter_sign_removed_first_line = '-'
+let g:gitgutter_sign_modified_removed = '.'
 
 if v:version >= 800
     set signcolumn=yes
@@ -110,6 +116,28 @@ endif
 " }}}
 
 " ornithocoder/mojave-dark-vim {{{
-colorscheme mojave-dark
+"colorscheme mojave-dark
+"set background=dark
+" }}}
+
+"  arcticicestudio/nord-vim {{{
+colorscheme nord
 set background=dark
+" }}}
+
+" Invisible characters{{{
+set listchars=eol:¬,tab:>·,trail:~,space:·
+set list
+" }}}
+
+" Swift Support {{{
+if executable('sourcekit-lsp')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'sourcekit-lsp',
+        \ 'cmd': {server_info->['sourcekit-lsp']},
+        \ 'whitelist': ['swift'],
+        \ })
+endif
+
+autocmd FileType swift setlocal omnifunc=lsp#complete
 " }}}

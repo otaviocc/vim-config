@@ -2,7 +2,7 @@
 
 # Install
 
-First, install and apply the [Mojave Dark](https://github.com/ornithocoder/mojave-dark-terminal) profile to your Terminal.
+First, install and apply the [Nord](https://www.nordtheme.com/ports) profile to your Terminal.
 
 Then, create a backup of your current vim setup:
 
@@ -14,7 +14,7 @@ $ mv ~/.vimrc ~/.vimrc.old
 Clone this repository and apply settings:
 
 ```bash
-$ git clone git://github.com/ornithocoder/vim-config.git
+$ git clone git://github.com/otaviocc/vim-config.git
 $ mv vim-config ~/.vim
 $ ln -s ~/.vim/vimrc ~/.vimrc
 ```

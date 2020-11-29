@@ -5,7 +5,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'ornithocoder/mojave-dark-vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
@@ -121,8 +120,8 @@ endif
 " }}}
 
 "  arcticicestudio/nord-vim {{{
-colorscheme nord
-set background=dark
+" colorscheme nord
+" set background=dark
 " }}}
 
 " Invisible characters{{{

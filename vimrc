@@ -114,14 +114,9 @@ else
 endif
 " }}}
 
-" ornithocoder/mojave-dark-vim {{{
-"colorscheme mojave-dark
-"set background=dark
-" }}}
-
 "  arcticicestudio/nord-vim {{{
-" colorscheme nord
-" set background=dark
+colorscheme nord
+set background=dark
 " }}}
 
 " Invisible characters{{{
